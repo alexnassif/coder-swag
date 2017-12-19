@@ -31,14 +31,12 @@ class CategoriesVC: UIViewController, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryCell 
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
             return cell
-        }
-        else{
-            return CategoryCell()
-        }
+        
+        
     }
 
 }
