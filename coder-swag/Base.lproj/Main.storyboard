@@ -42,10 +42,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="lQo-Pt-gOV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eve-Wt-f3S">
-                                                    <rect key="frame" x="187.5" y="57.5" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="384" y="57.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -83,17 +83,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="e1v-RD-52n"/>
                     <connections>
                         <outlet property="categoryTable" destination="SbJ-tF-DHa" id="gA3-NH-FZe"/>
-                        <segue destination="trY-xQ-fiP" kind="show" id="nmA-Hx-0iV"/>
+                        <segue destination="trY-xQ-fiP" kind="show" identifier="ProductsVC" id="nmA-Hx-0iV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477.5" y="132.5"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="1ff-sC-3Ve">
             <objects>
-                <viewController id="trY-xQ-fiP" sceneMemberID="viewController">
+                <viewController id="trY-xQ-fiP" customClass="ProductsVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kt8-QB-zLu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rFX-JH-fnD" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="rFX-JH-fnD" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -179,6 +179,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yuk-Rj-qIT"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="AJf-Tm-IPy" id="GfD-8k-kHt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jc1-a6-BrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
